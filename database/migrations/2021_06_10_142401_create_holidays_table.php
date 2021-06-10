@@ -15,14 +15,14 @@ class CreateHolidaysTable extends Migration
     {
         Schema::create('holidays', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('Number of people');
+            $table->tinyInteger('People');
             $table->tinyInteger('Rooms')->unsigned();
             $table->string('Location', 50);
             $table->string('Country', 50);
-            $table->date('Date of Arrival');
-            $table->date('Date of Departure');
+            $table->date('Arrival');
+            $table->date('Departure');
             $table->text('Description')->nullable();
-            $table->boolean('Availability');
+            $table->boolean('Availability')->default(1);
             $table->smallInteger('Price')->unsigned();
             $table->timestamps();
         });
