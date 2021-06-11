@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Holiday;
 
 class HolidayController extends Controller
 {
     // Archive
     public function index(){
-        return view('holidays');
+
+        $holidays = Holiday::all();
+      //  dump($holidays);
+
+        return view('holidays', compact('holidays'));
     }
 }

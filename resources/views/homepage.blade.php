@@ -4,7 +4,7 @@
     <div class="container">
         <h1>- Awful Homepage -</h1>
         <h2>The Worst Homepage Ever</h2>
-        <p>Il DB e la tabella funzionano, i seeder sono stati inseriti, errori paranormali si sono verificati (e sono stati risolti), ma non riesco a fare anche lo stile stasera! 
-        <br>Proverò comunque domani mattina a fare una presentazione - quantomeno passabile - dell'esercizio (parte bonus) :D Ciaoooo</p>
+        <p>Chiedo venia per la mostruosa presentazione, ma non ho fatto in tempo a fare il bonus e rendere esteticamente passabile l'esercizio :D <br> Su Holiday Packages ho stampato i risultati ottenuti.
+            <br>Ciaooo 
     </div>
 @endsection

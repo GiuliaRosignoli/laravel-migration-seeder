@@ -1,14 +1,11 @@
 <!--Header-->
 
-<div class="container">
-    <a href="{{ route('homepage') }}">BRAND</a>
+<div class="container bg-dark bg-gradient">
     <nav>
-        <ul>
-            <li><a href="{{ route('homepage') }}">HOME</a></li>
-            <li><a href="{{ route('holidays') }}">HOLIDAY PACKAGES</a></li>
-            <li>INFO</li>
-            <li><a href="{{ route('contacts') }}">CONTACT US</a></li>
-            <li>MORE</li>
-        </ul>
+        <div class="btn-group " role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary"><a href="{{ route('homepage') }}">HOME</a></button>
+            <button type="button" class="btn btn-primary"><a href="{{ route('holidays') }}">HOLIDAY PACKAGES</a></button>
+            <button type="button" class="btn btn-primary"><a href="{{ route('contacts') }}">CONTACT US</a></button>
+          </div>
     </nav>
 </div>
