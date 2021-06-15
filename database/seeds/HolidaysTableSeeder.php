@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 use App\Holiday;
+
 
 class HolidaysTableSeeder extends Seeder
 {
@@ -10,20 +12,20 @@ class HolidaysTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         //Instance creation
-        for($i=0; $i<20; $i++){
+        for($i=0; $i < 20; $i++){
             $new_holiday = new Holiday();
-            $new_holiday->People = 2;
-            $new_holiday->Rooms = 1;
-            $new_holiday->Location = 'Mountains';
-            $new_holiday->Country = 'Scotland';
-            $new_holiday->Arrival = '2021/07/10';
-            $new_holiday->Departure = '2021/07/16';
-            $new_holiday->Description = 'The place..lorem ipsum ';
-            $new_holiday->Availability = 1;
-            $new_holiday->Price = 700;
+            $new_holiday->People = $faker-> randomDigit();
+            $new_holiday->Rooms = $faker-> randomDigit();
+            $new_holiday->Location = $faker->text(20);
+            $new_holiday->Country = $faker->countryCode();
+            $new_holiday->Arrival = $faker->dateTime();
+            $new_holiday->Departure = $faker->dateTime();
+            $new_holiday->Description = $faker->text(40);
+            $new_holiday->Availability = $faker->randomDigit(1);
+            $new_holiday->Price = $faker->randomDigit();
 
             $new_holiday->save();
         } 
